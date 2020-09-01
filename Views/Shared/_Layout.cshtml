@@ -6,8 +6,9 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/estiloprin.css")
 </head>
-<body>
+<body >
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -16,17 +17,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("OTHELLO", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("OTHELLO Cx", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Login", "Index", "Home")</li>
                     <li>@Html.ActionLink("Partidas", "About", "Home")</li>
                     <li>@Html.ActionLink("Torneos", "About", "Home")</li>
                     <li>@Html.ActionLink("Ranking", "About", "Home")</li>
                     <li>@Html.ActionLink("Reglas","About","Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li >@Html.ActionLink("Login","Contact","Home")</li>
                 </ul>
             </div>
         </div>
@@ -35,7 +35,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p style="color:white">&copy; @DateTime.Now.Year - Othello Cx Creador Josue Antonio Cux Barrientos</p>
         </footer>
     </div>
 
