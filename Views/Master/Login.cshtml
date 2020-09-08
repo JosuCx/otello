@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css_login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+            @RenderBody()
+        </div>
+    </div>
+    @Scripts.Render("/Scripts/jquery")
+    @Scripts.Render("/Scripts/bootstrap")
+    @RenderSection("scripts",required:false)
+</body>
+</html>
