@@ -40,6 +40,10 @@ namespace otello
                 "~/Content/bootstrap-slate.min.css",
                 "~/Content/site.css"
                 ));
+            bundles.Add(new StyleBundle("~/Icons/icon").Include(
+                "~/Icons/font-awesome.css",
+                "~/Icons/font-awesome.min.css"
+                ));
         }
     }
 }
