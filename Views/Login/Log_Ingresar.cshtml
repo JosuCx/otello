@@ -1,12 +1,21 @@
-﻿
+﻿@model otello.Models.usuario
 @{
+    string mn = "Escribe tu usuario";
     ViewBag.Title = "Log_Ingresar";
     Layout = "~/Views/Master/Login.cshtml";
-}
-    <form class="register-form" method="post">
-        <input type="text" name="usuario" placeholder="Escriba su nombre de usuario" />
-        <input type="password"  name="password" placeholder="password" />
-        <button>create</button>
-        <p class="message">Ya estas registrado? <a href="#">Registrate</a></p>
-    </form>
 
+}
+    <div class="form-group">
+        @using (Html.BeginForm("Ingreso", "Login", FormMethod.Post))
+        {
+            <p sytle="color:black;">Ingreso de Cuenta</p>
+            @Html.EditorFor(model => model.usuario1, new { htmlAttributes = new { placeholder = "Escribe tu usuario" } })
+            @Html.ValidationMessageFor(model => model.usuario1)
+            @Html.EditorFor(model => model.pass, new { htmlAttributes = new { placeholder = "Escribe tu password" } })
+            @Html.ValidationMessageFor(model => model.pass)
+            <label class="text-danger">@Html.DisplayFor(model => model.Error)</label>
+            <input type="submit" name="name" value="Ingresar" />
+            <p class="message">No estas registrado? <a href="#">Registrate</a></p>
+        }
+
+    </div>

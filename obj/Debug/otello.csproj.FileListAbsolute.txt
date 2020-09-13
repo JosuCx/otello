@@ -77,3 +77,7 @@ C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\Proyectos\IPC2\2S-2020\proy
 C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\Proyectos\IPC2\2S-2020\proyecto_otello\otello\obj\Debug\otello.csproj.CopyComplete
 C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\Proyectos\IPC2\2S-2020\proyecto_otello\otello\obj\Debug\otello.dll
 C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\Proyectos\IPC2\2S-2020\proyecto_otello\otello\obj\Debug\otello.pdb
+C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\Proyectos\IPC2\2S-2020\proyecto_otello\otello\bin\EntityFramework.dll
+C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\Proyectos\IPC2\2S-2020\proyecto_otello\otello\bin\EntityFramework.SqlServer.dll
+C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\Proyectos\IPC2\2S-2020\proyecto_otello\otello\bin\EntityFramework.xml
+C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\Proyectos\IPC2\2S-2020\proyecto_otello\otello\bin\EntityFramework.SqlServer.xml

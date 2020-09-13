@@ -1,7 +1,6 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url(../image/tablero.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -13,7 +12,6 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-image: url(../image/tablero.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;

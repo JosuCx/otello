@@ -20,7 +20,9 @@ namespace otello
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrapmin.js")
+                      );
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
@@ -43,6 +45,10 @@ namespace otello
             bundles.Add(new StyleBundle("~/Icons/icon").Include(
                 "~/Icons/font-awesome.css",
                 "~/Icons/font-awesome.min.css"
+                ));
+            bundles.Add(new StyleBundle("~/Content/slate1").Include(
+                "~/Content/bootstrap-slate.css",
+                "~/Content/bootstrap-slate.min.css"
                 ));
         }
     }
