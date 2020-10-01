@@ -4,5 +4,21 @@
     Layout = "~/Views/Master/usuario.cshtml";
 }
 
-<h2>Menu_usuario</h2>
+    <div id="ji">
+        <h1>Juego Individual</h1>
+        @Html.ActionLink("Maquina", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Jugador", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
 
+    </div>
+    <div id="jc">
+        <h1>JCJ</h1>
+        @Html.ActionLink("Crear", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Buscar", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
+    </div>
+    <div id="jt">
+        <h1>Torneo</h1>
+        @Html.ActionLink("Crear", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Acceder", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Buscar", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
+
+    </div>

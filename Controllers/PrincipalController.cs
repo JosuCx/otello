@@ -13,5 +13,17 @@ namespace otello.Controllers
         {
             return View();
         }
+        public ActionResult Ranking()
+        {
+            return View();
+        }
+        public ActionResult Reglas()
+        {
+            return View();
+        }
+        public ActionResult Partidas()
+        {
+            return View();
+        }
     }
 }

@@ -13,5 +13,21 @@ namespace otello.Controllers
         {
             return View();
         }
+        public ActionResult Estadistica_usuario()
+        {
+            return View();
+        }
+        public ActionResult Editar_perfil()
+        {
+            return View();
+        }
+        public ActionResult Notificaciones()
+        {
+            return View();
+        }
+        public ActionResult Reglas()
+        {
+            return View();
+        }
     }
 }

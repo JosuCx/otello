@@ -10,6 +10,8 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Icons/icon")
     @Styles.Render("~/Content/slate1")
+
+    @Styles.Render("~/Content/usuario")
     @Scripts.Render("/Scripts/jquery")
     @Scripts.Render("/Scripts/jqueryval")
     @Scripts.Render("/Scripts/modernizr")
@@ -17,6 +19,34 @@
     @RenderSection("scripts", required: false)
 </head>
 <body>
+    <div id="menu" style="width:100%; height:50%; position:fixed; top:0%; left:0%; z-index:3;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            @Html.ActionLink("Inicio", "Menu_usuario", "Usuario", null, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        @Html.ActionLink("Estadisiticas", "Estadistica_usuario", "Usuario", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Notificaciones", "Notificaciones", "Usuario", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Reglas", "Reglas", "Usuario", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Editar Perfil", "Editar_perfil", "Usuario", null, new { @class = "nav-link" })
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </div>
     <div>
         @RenderBody()
     </div>

@@ -1,0 +1,26 @@
+﻿body {
+}
+#ji {
+background-color:greenyellow;
+width:30%;
+height:20%;
+position:fixed;
+top:10%;
+left:10%;
+}
+#jc {
+    background-color: greenyellow;
+    width: 30%;
+    height: 20%;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+}
+#jt {
+    background-color: greenyellow;
+    width: 30%;
+    height: 20%;
+    position: fixed;
+    top: 60%;
+    left: 40%;
+}

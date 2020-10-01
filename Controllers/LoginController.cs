@@ -18,7 +18,7 @@ namespace otello.Controllers
         {
             return View();
         }
-        public ActionResult Log_Ingresar(string user, string pass)
+        public ActionResult Log_Ingresar()
         {
 
             return View();

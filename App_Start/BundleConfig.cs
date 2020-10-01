@@ -50,6 +50,9 @@ namespace otello
                 "~/Content/bootstrap-slate.css",
                 "~/Content/bootstrap-slate.min.css"
                 ));
+            bundles.Add(new StyleBundle("~/Content/usuario").Include(
+                "~/Content/estilousuario.css"
+                ));
         }
     }
 }
