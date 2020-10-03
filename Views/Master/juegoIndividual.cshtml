@@ -7,11 +7,26 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/slate1")
+    @Styles.Render("~/Content/juegoi")
+    @Scripts.Render("/Scripts/jquery")
+    @Scripts.Render("/Scripts/jqueryval")
+    @Scripts.Render("/Scripts/modernizr")
+    @Scripts.Render("/Scripts/bootstrap")
+    @RenderSection("scripts", required: false)
 </head>
 <body>
     <div>
-    
+        @Html.ActionLink("Regresar", "Menu_usuario", "Usuario", null, new { @class = "btn btn-danger" })
+        <div id="navv">
+            <h1>@ViewBag.Title</h1>
+        </div>
+    </div>
+    <!-- Modulo -->
+    <div>
+        @RenderBody()
     </div>
 </body>
-</html>
+    </html>

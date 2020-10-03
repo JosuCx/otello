@@ -6,16 +6,12 @@ using System.Web.Mvc;
 
 namespace otello.Controllers
 {
-    public class JuegoIndividualControllers : Controller
+    public class JuegoindividuallController : Controller
     {
-        public ActionResult Maquina()
+        // GET: Juegoindividuall
+        public ActionResult JugadorVsMaquina()
         {
             return View();
         }
-        public ActionResult Jugador()
-        {
-            return View();
-        }
-
     }
 }

@@ -139,6 +139,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JuegoindividuallController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PrincipalController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -175,6 +176,7 @@
     <Content Include="Content\css_login.css" />
     <Content Include="Content\estiloprin.css" />
     <Content Include="Content\estilousuario.css" />
+    <Content Include="Content\estilo_juego.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -245,6 +247,8 @@
     <Content Include="Views\usuario\Editar_perfil.cshtml" />
     <Content Include="Views\usuario\Notificaciones.cshtml" />
     <Content Include="Views\usuario\Reglas.cshtml" />
+    <Content Include="Views\Master\juegoIndividual.cshtml" />
+    <Content Include="Views\Juegoindividuall\JugadorVsMaquina.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

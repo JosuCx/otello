@@ -1,0 +1,56 @@
+﻿body {
+}
+#navv {
+width:60%;
+height:10%;
+position:fixed;
+top:0%;
+left:10%;
+}
+#control_juego {
+background-color:crimson;
+width:30%;
+height:70%;
+position:fixed;
+top:20%;
+left:65%;
+}
+#juegoo {
+    background-color:darkred;
+    width:40%;
+    height:80%;
+    position:fixed;
+    top:10%;
+    left:10%;
+    padding-left:1%;
+}
+.bloque1 {
+    border:1px solid #000;
+    width:50px;
+    height:50px;
+}
+.cafe {
+    background-color: saddlebrown;
+}
+
+.float1 {
+    float:left;
+}
+.verde {
+    background-color: green;
+}
+    #bloque_cafe {
+        border: 1px solid #000;
+        width: 50px;
+        height: 50px;
+        background-color: saddlebrown;
+    }
+#bloque_cafe2{
+    border: 1px solid #000;
+    width: 50px;
+    height: 50px;
+    background-color: saddlebrown;
+    position:fixed;
+    top:10%;
+    left:40%;
+}

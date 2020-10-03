@@ -53,6 +53,9 @@ namespace otello
             bundles.Add(new StyleBundle("~/Content/usuario").Include(
                 "~/Content/estilousuario.css"
                 ));
+            bundles.Add(new StyleBundle("~/Content/juegoi").Include(
+               "~/Content/estilo_juego.css"
+               ));
         }
     }
 }

@@ -164,3 +164,9 @@ C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\IPC2\2S-2020\proyecto_otell
 C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\IPC2\2S-2020\proyecto_otello\otello\obj\Debug\otello.csproj.CopyComplete
 C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\IPC2\2S-2020\proyecto_otello\otello\obj\Debug\otello.dll
 C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\IPC2\2S-2020\proyecto_otello\otello\obj\Debug\otello.pdb
+C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\IPC2\2S-2020\proyecto_otello\otello\bin\System.Net.Http.Formatting.dll
+C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\IPC2\2S-2020\proyecto_otello\otello\bin\System.Web.Http.dll
+C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\IPC2\2S-2020\proyecto_otello\otello\bin\System.Web.Http.WebHost.dll
+C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\IPC2\2S-2020\proyecto_otello\otello\bin\System.Net.Http.Formatting.xml
+C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\IPC2\2S-2020\proyecto_otello\otello\bin\System.Web.Http.xml
+C:\Users\jose antonio cux .LAPTOP-29ACJJUH\Documents\IPC2\2S-2020\proyecto_otello\otello\bin\System.Web.Http.WebHost.xml
