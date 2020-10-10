@@ -9,11 +9,11 @@ left:10%;
 }
 #control_juego {
 background-color:crimson;
-width:30%;
-height:70%;
+width:25%;
+height:80%;
 position:fixed;
-top:20%;
-left:65%;
+top:10%;
+left:52%;
 }
 #juegoo {
     background-color:darkred;
@@ -32,7 +32,9 @@ left:65%;
 .cafe {
     background-color: saddlebrown;
 }
-
+.bloque1.verde:hover {
+    background-color:aqua;
+}
 .float1 {
     float:left;
 }
@@ -53,4 +55,254 @@ left:65%;
     position:fixed;
     top:10%;
     left:40%;
+}
+.ciculo1 {
+    fill:black;
+}
+.circulo2 {
+    fill: white;
+}
+.circulo0 {
+    fill: none;
+}
+#a1 {
+    fill: orange;
+}
+#a2 {
+    fill:red;
+}
+#a3 {
+    fill: orange;
+}
+#a4 {
+    fill: orange;
+}
+#a5 {
+    fill: orange;
+}
+#a6 {
+    fill: orange;
+}
+#a7 {
+    fill: orange;
+}
+#a8 {
+    fill: orange;
+}
+#b1 {
+    fill: orange;
+}
+
+#b2 {
+    fill: orange;
+}
+
+#b3 {
+    fill: orange;
+}
+
+#b4 {
+    fill: orange;
+}
+
+#b5 {
+    fill: orange;
+}
+
+#b6 {
+    fill: orange;
+}
+
+#b7 {
+    fill: orange;
+}
+
+#b8 {
+    fill: orange;
+}
+#c1 {
+    fill: orange;
+}
+
+#c2 {
+    fill: orange;
+}
+
+#c3 {
+    fill: orange;
+}
+
+#c4 {
+    fill: orange;
+}
+
+#c5 {
+    fill: orange;
+}
+
+#c6 {
+    fill: orange;
+}
+
+#c7 {
+    fill: orange;
+}
+
+#c8 {
+    fill: orange;
+}
+#d1 {
+    fill: orange;
+}
+
+#d2 {
+    fill: orange;
+}
+
+#d3 {
+    fill: orange;
+}
+
+#d4 {
+    fill: white;
+}
+
+#d5 {
+    fill: black;
+}
+
+#d6 {
+    fill: orange;
+}
+
+#d7 {
+    fill: orange;
+}
+
+#d8 {
+    fill: orange;
+}
+#e1 {
+    fill: orange;
+}
+
+#e2 {
+    fill: orange;
+}
+
+#e3 {
+    fill: orange;
+}
+
+#e4 {
+    fill: black;
+}
+
+#e5 {
+    fill: white;
+}
+
+#e6 {
+    fill: orange;
+}
+
+#e7 {
+    fill: orange;
+}
+
+#e8 {
+    fill: orange;
+}
+#f1 {
+    fill: orange;
+}
+
+#f2 {
+    fill: orange;
+}
+
+#f3 {
+    fill: orange;
+}
+
+#f4 {
+    fill: orange;
+}
+
+#f5 {
+    fill: orange;
+}
+
+#f6 {
+    fill: orange;
+}
+
+#f7 {
+    fill: orange;
+}
+
+#f8 {
+    fill: orange;
+}
+#g1 {
+    fill: orange;
+}
+
+#g2 {
+    fill: orange;
+}
+
+#g3 {
+    fill: orange;
+}
+
+#g4 {
+    fill: orange;
+}
+
+#g5 {
+    fill: orange;
+}
+
+#g6 {
+    fill: orange;
+}
+
+#g7 {
+    fill: orange;
+}
+
+#g8 {
+    fill: orange;
+}
+#h1 {
+    fill: orange;
+}
+
+#h2 {
+    fill: orange;
+}
+
+#h3 {
+    fill: orange;
+}
+
+#h4 {
+    fill: orange;
+}
+
+#h5 {
+    fill: orange;
+}
+
+#h6 {
+    fill: orange;
+}
+
+#h7 {
+    fill: orange;
+}
+
+#h8 {
+    fill: orange;
 }

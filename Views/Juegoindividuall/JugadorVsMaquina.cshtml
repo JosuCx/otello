@@ -3,126 +3,473 @@
     Layout = "~/Views/Master/juegoIndividual.cshtml";
 }
 <!-- Modulo controles -->
-<div id="control_juego">
+    <div id="control_juego">
+        <center><h1>play</h1></center>
+        <!--Botones de juego-->
+        <table>
+            <tr>
+                <th>
+                    <center><button name="play" onclick="play()">Play</button></center>
+                </th>
+                <th>
+                    <center><button name="reiniciar" onclick="reset()">Reiniciar</button></center>
+                </th>
+                <th>
+                    <center><button name="descargar" onclick="descargar()">Descargar</button></center>
+                </th>
+                <th>
+                    <center><button name="cargar" onclick="cargar()">Cargar</button></center>
+                </th>
+            </tr>
+        </table>
 
-</div>
+        <!--Tabla de jugador 1-->
+        <table style="background-color:aqua; color:black; width:100%;height:40%;">
+            <tr>
+                <th><center><h3>Jugador 1</h3></center></th>
+            </tr>
+            <tr>
+                <th>
+                    <center><label id="fic1">Ficha blancas</label></center>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <label>Nombre:</label>
+                </td>
+                <td>
+                    <label id="nom1"> Jugador1</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>No Partidas:</label>
+                </td>
+                <td>
+                    <label id="partida1"> 0</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Puntos:</label>
+                </td>
+                <td>
+                    <label id="pt_blancas">2 </label>
+                </td>
+            </tr>
+        </table>
+
+        <!--Tabla de jugador 2-->
+        <table style="background-color:darkorange; color:white; width:100%;height:40%;">
+            <tr>
+                <th><center><h3>Jugador 2</h3></center></th>
+            </tr>
+            <tr>
+                <th>
+                    <center><label id="fic1">Ficha Negras</label></center>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <label>Nombre:</label>
+                </td>
+                <td>
+                    <label id="nom2"> Jugador2</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>No Partidas:</label>
+                </td>
+                <td>
+                    <label id="partida2"> 0</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Puntos:</label>
+                </td>
+                <td>
+                    <label id="pt_negras"> 2</label>
+                </td>
+            </tr>
+
+        </table>
+    </div>
 <!-- Modulo de Juego -->>
-<div id="juegoo">
-    <!--Letras de Arriba-->
-    <div class="bloque1 cafe float1"></div>
-    <div class="bloque1 cafe float1">1</div>
-    <div class="bloque1 cafe float1">2</div>
-    <div class="bloque1 cafe float1">3</div>
-    <div class="bloque1 cafe float1">4</div>
-    <div class="bloque1 cafe float1">5</div>
-    <div class="bloque1 cafe float1">6</div>
-    <div class="bloque1 cafe float1">7</div>
-    <div class="bloque1 cafe float1">8</div>
-    <div class="bloque1 cafe float1"></div>
+    <div id="juegoo">
+        <!--Letras de Arriba-->
+        <div class="bloque1 cafe float1"></div>
+        <div class="bloque1 cafe float1">1</div>
+        <div class="bloque1 cafe float1">2</div>
+        <div class="bloque1 cafe float1">3</div>
+        <div class="bloque1 cafe float1">4</div>
+        <div class="bloque1 cafe float1">5</div>
+        <div class="bloque1 cafe float1">6</div>
+        <div class="bloque1 cafe float1">7</div>
+        <div class="bloque1 cafe float1">8</div>
+        <div class="bloque1 cafe float1"></div>
 
-    <div class="bloque1 cafe float1">1</div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 cafe float1">A</div>
-
-
-    <div class="bloque1 cafe float1">2</div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 cafe float1">B</div>
-
-
-    <div class="bloque1 cafe float1">3</div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 cafe float1">C</div>
-
-
-    <div class="bloque1 cafe float1">4</div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 cafe float1">D</div>
+        <div class="bloque1 cafe float1">1</div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="a1" onclick="posi(1)"/>
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="a2" onclick="posi(2)" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="a3" onclick="posi(3)"/>
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="a4" onclick="posi(4)" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="a5" onclick="posi(5)"/>
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="a6" onclick="posi(6)" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="a7" onclick="posi(7)"/>
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="a8" onclick="posi(8)" />
+            </svg>
+        </div>
+        <div class="bloque1 cafe float1">A</div>
 
 
-    <div class="bloque1 cafe float1">5</div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 cafe float1">E</div>
+        <div class="bloque1 cafe float1">2</div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="b1" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="b2" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="b3" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="b4" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="b5" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="b6" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="b7" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="b8" />
+            </svg>
+        </div>
+        <div class="bloque1 cafe float1">B</div>
 
 
-    <div class="bloque1 cafe float1">6</div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 cafe float1">F</div>
+        <div class="bloque1 cafe float1">3</div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20" id="c1" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="c2" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="c3" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="c4" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="c5" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="c6" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="c7" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="c8" />
+            </svg>
+        </div>
+        <div class="bloque1 cafe float1">C</div>
 
 
-    <div class="bloque1 cafe float1">7</div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 cafe float1">G</div>
+        <div class="bloque1 cafe float1">4</div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="d1" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="d2" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="d3" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg height="50" width="50">
+                <circle cx="23" cy="23" r="20"  id="d4" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="d5" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="d6" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="d7" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="d8" />
+            </svg>
+        </div>
+        <div class="bloque1 cafe float1">
+        </div>
 
 
-    <div class="bloque1 cafe float1">8</div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 verde float1"></div>
-    <div class="bloque1 cafe float1">H</div>
+        <div class="bloque1 cafe float1">5</div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="e1" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="e2" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="e3" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg height="50" width="50">
+                <circle cx="23" cy="23" r="20"  id="e4" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg height="50" width="50">
+                <circle cx="23" cy="23" r="20"  id="e5" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="e6" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="e7" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="e8" />
+            </svg>
+        </div>
+        <div class="bloque1 cafe float1">E</div>
 
-    <div class="bloque1 cafe float1"></div>
-    <div class="bloque1 cafe float1">A</div>
-    <div class="bloque1 cafe float1">B</div>
-    <div class="bloque1 cafe float1">C</div>
-    <div class="bloque1 cafe float1">D</div>
-    <div class="bloque1 cafe float1">E</div>
-    <div class="bloque1 cafe float1">F</div>
-    <div class="bloque1 cafe float1">G</div>
-    <div class="bloque1 cafe float1">H</div>
-    <div class="bloque1 cafe float1"></div>
-</div>
+
+        <div class="bloque1 cafe float1">6</div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="f1" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="f2" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="f3" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="f4" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="f5" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="f6" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="f7" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="f8" />
+            </svg>
+        </div>
+        <div class="bloque1 cafe float1">F</div>
+
+
+        <div class="bloque1 cafe float1">7</div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="g1" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="g2" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="g3" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="g4" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="g5" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="g6" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="g7" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="g8" />
+            </svg>
+        </div>
+        <div class="bloque1 cafe float1">G</div>
+
+
+        <div class="bloque1 cafe float1">8</div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="h1" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="h2" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="h3" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="h4" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="h5" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="h6" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="h7" />
+            </svg>
+        </div>
+        <div class="bloque1 verde float1">
+            <svg>
+                <circle cx="23" cy="23" r="20"  id="h8" />
+            </svg>
+        </div>
+        <div class="bloque1 cafe float1">H</div>
+
+        <div class="bloque1 cafe float1"></div>
+        <div class="bloque1 cafe float1">A</div>
+        <div class="bloque1 cafe float1">B</div>
+        <div class="bloque1 cafe float1">C</div>
+        <div class="bloque1 cafe float1">D</div>
+        <div class="bloque1 cafe float1">E</div>
+        <div class="bloque1 cafe float1">F</div>
+        <div class="bloque1 cafe float1">G</div>
+        <div class="bloque1 cafe float1">H</div>
+        <div class="bloque1 cafe float1"></div>
+    </div>

@@ -1,5 +1,6 @@
 ﻿@{
     Layout = null;
+ 
 }
 
 <!DOCTYPE html>
@@ -39,6 +40,12 @@
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Editar Perfil", "Editar_perfil", "Usuario", null, new { @class = "nav-link" })
+                    </li>
+                    <li>
+                        @Session["usuario1"].ToString()
+                    </li>
+                    <li>
+                        @Html.ActionLink("Cerrar Sesion", "Principal", "Principal", null, new { @class = "nav-link" })
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
