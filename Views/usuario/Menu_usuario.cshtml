@@ -3,22 +3,37 @@
     ViewBag.Title = "Menu_usuario";
     Layout = "~/Views/Master/usuario.cshtml";
 }
+<h1>Hoo</h1>
+<p></p>
+<h3>Menu othello</h3>
 
-    <div id="ji">
-        <h1>Juego Individual</h1>
-        @Html.ActionLink("Maquina", "JugadorVsMaquina", "JuegoIndividuall", null, new { @class = "btn btn-secundary" })
-        @Html.ActionLink("Jugador", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
+<p>1</p>
+<p>1</p>
+<p>1</p>
+<p>1</p>
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+    <div class="card-header">Juego Individual</div>
+    <div class="card-body">
 
+        @Html.ActionLink("Jugador", "JugadorVsMaquina", "Juegoindividuall", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Maquina", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
     </div>
-    <div id="jc">
-        <h1>JCJ</h1>
+</div>
+
+<div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+    <div class="card-header">JCJ</div>
+    <div class="card-body">
+
         @Html.ActionLink("Crear", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
-        @Html.ActionLink("Buscar", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Acceder", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
     </div>
-    <div id="jt">
-        <h1>Torneo</h1>
+</div>
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+    <div class="card-header">Torneo</div>
+    <div class="card-body">
         @Html.ActionLink("Crear", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
         @Html.ActionLink("Acceder", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
         @Html.ActionLink("Buscar", "Estadistica_usuario", "Usuario", null, new { @class = "btn btn-primary" })
-
     </div>
+</div>
+

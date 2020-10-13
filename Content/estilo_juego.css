@@ -13,7 +13,7 @@ width:25%;
 height:80%;
 position:fixed;
 top:10%;
-left:70%;
+left:90%;
 }
 #juegoo {
     background-color:darkred;
@@ -65,244 +65,254 @@ left:70%;
 .circulo0 {
     fill: none;
 }
+#a00 {
+    fill: green;
+}
+
 #a01 {
-    fill: orange;
+    fill: green;
 }
+
 #a02 {
-    fill:red;
+    fill: green;
 }
+
 #a03 {
-    fill: orange;
+    fill: green;
 }
+
 #a04 {
-    fill: orange;
+    fill: green;
 }
+
 #a05 {
-    fill: orange;
+    fill: green;
 }
+
 #a06 {
-    fill: orange;
+    fill: green;
 }
+
 #a07 {
-    fill: orange;
-}
-#a08 {
-    fill: orange;
-}
-#a09 {
-    fill: orange;
+    fill: green;
 }
 
 #a10 {
-    fill: orange;
+    fill: green;
 }
 
 #a11 {
-    fill: orange;
+    fill: green;
 }
 
 #a12 {
-    fill: orange;
+    fill: green;
 }
 
 #a13 {
-    fill: orange;
+    fill: green;
 }
 
 #a14 {
-    fill: orange;
+    fill: green;
 }
 
 #a15 {
-    fill: orange;
+    fill: green;
 }
 
 #a16 {
-    fill: orange;
+    fill: green;
 }
+
 #a17 {
-    fill: orange;
-}
-
-#a18 {
-    fill: orange;
-}
-
-#a19 {
-    fill: orange;
+    fill: green;
 }
 
 #a20 {
-    fill: orange;
+    fill: green;
 }
 
 #a21 {
-    fill: orange;
+    fill: green;
 }
 
 #a22 {
-    fill: orange;
+    fill: green;
 }
 
 #a23 {
-    fill: orange;
+    fill: green;
 }
 
 #a24 {
-    fill: orange;
+    fill: green;
 }
+
 #a25 {
-    fill: orange;
+    fill: green;
 }
 
 #a26 {
-    fill: orange;
+    fill: green;
 }
 
 #a27 {
-    fill: orange;
-}
-
-#a28 {
-    fill: white;
-}
-
-#a29 {
-    fill: black;
+    fill: green;
 }
 
 #a30 {
-    fill: orange;
+    fill: green;
 }
 
 #a31 {
-    fill: orange;
+    fill: green;
 }
 
 #a32 {
-    fill: orange;
+    fill: green;
 }
+
 #a33 {
-    fill: orange;
+    fill: green;
 }
 
 #a34 {
-    fill: orange;
+    fill: green;
 }
 
 #a35 {
-    fill: orange;
+    fill: green;
 }
 
 #a36 {
-    fill: black;
+    fill: green;
 }
 
 #a37 {
-    fill: white;
+    fill: green;
 }
-
-#a38 {
-    fill: orange;
-}
-
-#a39 {
-    fill: orange;
-}
-
 #a40 {
-    fill: orange;
+    fill: green;
 }
+
 #a41 {
-    fill: orange;
+    fill: green;
 }
 
 #a42 {
-    fill: orange;
+    fill: green;
 }
 
 #a43 {
-    fill: orange;
+    fill: green;
 }
 
 #a44 {
-    fill: orange;
+    fill: green;
 }
 
 #a45 {
-    fill: orange;
+    fill: green;
 }
 
 #a46 {
-    fill: orange;
+    fill: green;
 }
 
 #a47 {
-    fill: orange;
-}
-
-#a48 {
-    fill: orange;
-}
-#a49 {
-    fill: orange;
+    fill: green;
 }
 
 #a50 {
-    fill: orange;
+    fill: green;
 }
 
 #a51 {
-    fill: orange;
+    fill: green;
 }
 
 #a52 {
-    fill: orange;
+    fill: green;
 }
 
 #a53 {
-    fill: orange;
+    fill: green;
 }
 
 #a54 {
-    fill: orange;
+    fill: green;
 }
-
 #a55 {
-    fill: orange;
+    fill: green;
 }
 
 #a56 {
-    fill: orange;
+    fill: green;
 }
+
 #a57 {
-    fill: orange;
+    fill: green;
 }
-
-#a58 {
-    fill: orange;
-}
-
-#a59 {
-    fill: orange;
-}
-
 #a60 {
-    fill: orange;
+    fill: green;
 }
 
 #a61 {
-    fill: orange;
+    fill: green;
 }
 
 #a62 {
-    fill: orange;
+    fill: green;
 }
 
 #a63 {
-    fill: orange;
+    fill: green;
 }
 
 #a64 {
-    fill: orange;
+    fill: green;
+}
+
+#a65 {
+    fill: green;
+}
+
+#a66 {
+    fill: green;
+}
+
+#a67 {
+    fill: green;
+}
+#a70 {
+    fill: green;
+}
+
+#a71 {
+    fill: green;
+}
+
+#a72 {
+    fill: green;
+}
+
+#a73 {
+    fill: green;
+}
+
+#a74 {
+    fill: green;
+}
+
+#a75 {
+    fill: green;
+}
+
+#a76 {
+    fill: green;
+}
+
+#a77 {
+    fill: green;
 }

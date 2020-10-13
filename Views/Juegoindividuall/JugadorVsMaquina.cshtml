@@ -20,6 +20,9 @@
                 <th>
                     <center><button name="cargar" onclick="cargar()">Cargar</button></center>
                 </th>
+                <th>
+                    <center><button name="guarda" onclick="cargar()">Guardar Registro</button></center>
+                </th>
             </tr>
         </table>
 
@@ -57,6 +60,11 @@
                     <label id="pt_blancas">2 </label>
                 </td>
             </tr>
+            <tr>
+                <th>
+                    <center><button name="pasar1" onclick="pasar(1)">Pasar Turno</button></center>
+                </th>
+            </tr>
         </table>
 
         <!--Tabla de jugador 2-->
@@ -93,7 +101,11 @@
                     <label id="pt_negras"> 2</label>
                 </td>
             </tr>
-
+            <tr>
+                <th>
+                    <center><button name="pasar2" onclick="pasar(2)">Pasar Turno</button></center>
+                </th>
+            </tr>
         </table>
     </div>
 <!-- Modulo de Juego -->>
@@ -113,42 +125,42 @@
         <div class="bloque1 cafe float1">1</div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a01" onclick="prueba(0,1)"/>
+                <circle cx="23" cy="23" r="20" id="a00" onclick="completa(0,0)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a02" onclick="prueba(0,2)" />
+                <circle cx="23" cy="23" r="20" id="a01" onclick="completa(0,1)" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a03" onclick="prueba(0,3)"/>
+                <circle cx="23" cy="23" r="20" id="a02" onclick="completa(0,2)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a04" onclick="prueba(0,4)" />
+                <circle cx="23" cy="23" r="20" id="a03" onclick="completa(0,3)" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a05" onclick="prueba(0,5)"/>
+                <circle cx="23" cy="23" r="20" id="a04" onclick="completa(0,4)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a06" onclick="prueba(0,6)" />
+                <circle cx="23" cy="23" r="20" id="a05" onclick="completa(0,5)" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a07" onclick="prueba(0,7)"/>
+                <circle cx="23" cy="23" r="20" id="a06" onclick="completa(0,6)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a08" onclick="prueba(0,8)" />
+                <circle cx="23" cy="23" r="20" id="a07" onclick="completa(0,7)" />
             </svg>
         </div>
         <div class="bloque1 cafe float1">A</div>
@@ -157,42 +169,42 @@
         <div class="bloque1 cafe float1">2</div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a09" onclick="prueba(0,9)" />
+                <circle cx="23" cy="23" r="20" id="a10" onclick="completa(1,0)" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a10" onclick="prueba(1,0)"/>
+                <circle cx="23" cy="23" r="20" id="a11" onclick="completa(1,1)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a11" onclick="prueba(1,1)"/>
+                <circle cx="23" cy="23" r="20" id="a12" onclick="completa(1,2)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a12" onclick="prueba(1,2)"/>
+                <circle cx="23" cy="23" r="20" id="a13" onclick="completa(1,3)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a13" onclick="prueba(1,3)" />
+                <circle cx="23" cy="23" r="20" id="a14" onclick="completa(1,4)" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a14" onclick="prueba(1,4)"/>
+                <circle cx="23" cy="23" r="20" id="a15" onclick="completa(1,5)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a15"  onclick="prueba(1,5)"/>
+                <circle cx="23" cy="23" r="20"  id="a16"  onclick="completa(1,6)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a16" onclick="prueba(1,6)"/>
+                <circle cx="23" cy="23" r="20"  id="a17" onclick="completa(1,7)"/>
             </svg>
         </div>
         <div class="bloque1 cafe float1">B</div>
@@ -201,42 +213,42 @@
         <div class="bloque1 cafe float1">3</div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20" id="a17" onclick="prueba(1,7)"/>
+                <circle cx="23" cy="23" r="20" id="a20" onclick="completa(2,0)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a18" onclick="prueba(1,8)"/>
+                <circle cx="23" cy="23" r="20"  id="a21" onclick="completa(2,1)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a19" onclick="prueba(1,9)"/>
+                <circle cx="23" cy="23" r="20"  id="a22" onclick="completa(2,2)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a20" onclick="prueba(2,0)"/>
+                <circle cx="23" cy="23" r="20"  id="a23" onclick="completa(2,3)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a21" onclick="prueba(2,1)"/>
+                <circle cx="23" cy="23" r="20"  id="a24" onclick="completa(2,4)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a22" onclick="prueba(2,2)"/>
+                <circle cx="23" cy="23" r="20"  id="a25" onclick="completa(2,5)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a23" onclick="prueba(2,3)"/>
+                <circle cx="23" cy="23" r="20"  id="a26" onclick="completa(2,6)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a24" onclick="prueba(2,4)"/>
+                <circle cx="23" cy="23" r="20"  id="a27" onclick="completa(2,7)"/>
             </svg>
         </div>
         <div class="bloque1 cafe float1">C</div>
@@ -245,42 +257,42 @@
         <div class="bloque1 cafe float1">4</div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a25" onclick="prueba(2,5)"/>
+                <circle cx="23" cy="23" r="20"  id="a30" onclick="completa(3,0)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a26" onclick="prueba(2,6)"/>
+                <circle cx="23" cy="23" r="20"  id="a31" onclick="completa(3,1)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a27" onclick="prueba(2,7)"/>
+                <circle cx="23" cy="23" r="20"  id="a32" onclick="completa(3,2)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg height="50" width="50">
-                <circle cx="23" cy="23" r="20"  id="a28" />
+                <circle cx="23" cy="23" r="20"  id="a33" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a29" />
+                <circle cx="23" cy="23" r="20"  id="a34" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a30" onclick="prueba(3,0)"/>
+                <circle cx="23" cy="23" r="20"  id="a35" onclick="completa(3,5)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a31" onclick="prueba(3,1)"/>
+                <circle cx="23" cy="23" r="20"  id="a36" onclick="completa(3,6)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a32" onclick="prueba(3,2)"/>
+                <circle cx="23" cy="23" r="20"  id="a37" onclick="completa(3,7)"/>
             </svg>
         </div>
         <div class="bloque1 cafe float1">D</div>
@@ -289,42 +301,42 @@
         <div class="bloque1 cafe float1">5</div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a33" onclick="prueba(3,3)"/>
+                <circle cx="23" cy="23" r="20"  id="a40" onclick="completa(4,0)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a34" onclick="prueba(3,4)"/>
+                <circle cx="23" cy="23" r="20"  id="a41" onclick="completa(4,1)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a35" onclick="prueba(3,5)"/>
+                <circle cx="23" cy="23" r="20"  id="a42" onclick="completa(4,2)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg height="50" width="50">
-                <circle cx="23" cy="23" r="20"  id="a36" />
+                <circle cx="23" cy="23" r="20"  id="a43" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg height="50" width="50">
-                <circle cx="23" cy="23" r="20"  id="a37" />
+                <circle cx="23" cy="23" r="20"  id="a44" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a38" onclick="prueba(3,8)"/>
+                <circle cx="23" cy="23" r="20"  id="a45" onclick="completa(4,5)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a39" onclick="prueba(3,9)"/>
+                <circle cx="23" cy="23" r="20"  id="a46" onclick="completa(4,6)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a40" onclick="prueba(4,0)"/>
+                <circle cx="23" cy="23" r="20"  id="a47" onclick="completa(4,7)"/>
             </svg>
         </div>
         <div class="bloque1 cafe float1">E</div>
@@ -333,42 +345,42 @@
         <div class="bloque1 cafe float1">6</div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a41" onclick="prueba(4,1)"/>
+                <circle cx="23" cy="23" r="20"  id="a50" onclick="completa(5, 0)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a42" onclick="prueba(4,2)"/>
+                <circle cx="23" cy="23" r="20"  id="a51" onclick="completa(5, 1)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a43" onclick="prueba(4,3)"/>
+                <circle cx="23" cy="23" r="20"  id="a52" onclick="completa(5, 2)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a44" onclick="prueba(4,4)" />
+                <circle cx="23" cy="23" r="20"  id="a53" onclick="completa(5, 3)" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a45" onclick="prueba(4,5)"/>
+                <circle cx="23" cy="23" r="20"  id="a54" onclick="completa(5, 4)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a46" onclick="prueba(4,6)"/>
+                <circle cx="23" cy="23" r="20"  id="a55" onclick="completa(5, 5)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a47" onclick="prueba(4,7)" />
+                <circle cx="23" cy="23" r="20"  id="a56" onclick="completa(5, 6)" />
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a48" onclick="prueba(4,8)" />
+                <circle cx="23" cy="23" r="20"  id="a57" onclick="completa(5, 7)" />
             </svg>
         </div>
         <div class="bloque1 cafe float1">F</div>
@@ -377,42 +389,42 @@
         <div class="bloque1 cafe float1">7</div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a49" onclick="prueba(4,9)"/>
+                <circle cx="23" cy="23" r="20"  id="a60" onclick="completa(6,0)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a50" onclick="prueba(5,0)"/>
+                <circle cx="23" cy="23" r="20"  id="a61" onclick="completa(6,1)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a51" onclick="prueba(5,1)"/>
+                <circle cx="23" cy="23" r="20"  id="a62" onclick="completa(6,2)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a52" onclick="prueba(5,2)"/>
+                <circle cx="23" cy="23" r="20"  id="a63" onclick="completa(6,3)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a53" onclick="prueba(5,3)"/>
+                <circle cx="23" cy="23" r="20"  id="a64" onclick="completa(6,4)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a54" onclick="prueba(5,4)"/>
+                <circle cx="23" cy="23" r="20"  id="a65" onclick="completa(6,5)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a55" onclick="prueba(5,5)"/>
+                <circle cx="23" cy="23" r="20"  id="a66" onclick="completa(6,6)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a56" onclick="prueba(5,6)"/>
+                <circle cx="23" cy="23" r="20"  id="a67" onclick="completa(6,7)"/>
             </svg>
         </div>
         <div class="bloque1 cafe float1">G</div>
@@ -421,42 +433,42 @@
         <div class="bloque1 cafe float1">8</div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a57" onclick="prueba(5,7)"/>
+                <circle cx="23" cy="23" r="20"  id="a70" onclick="completa(7,0)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a58" onclick="prueba(5,8)"/>
+                <circle cx="23" cy="23" r="20"  id="a71" onclick="completa(7,1)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a59" onclick="prueba(5,9)"/>
+                <circle cx="23" cy="23" r="20"  id="a72" onclick="completa(7,2)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a60" onclick="prueba(6,0)"/>
+                <circle cx="23" cy="23" r="20"  id="a73" onclick="completa(7,3)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a61" onclick="prueba(6,1)"/>
+                <circle cx="23" cy="23" r="20"  id="a74" onclick="completa(7,4)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a62" onclick="prueba(6,2)"/>
+                <circle cx="23" cy="23" r="20"  id="a75" onclick="completa(7,5)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a63" onclick="prueba(6,3)"/>
+                <circle cx="23" cy="23" r="20"  id="a76" onclick="completa(7,6)"/>
             </svg>
         </div>
         <div class="bloque1 verde float1">
             <svg>
-                <circle cx="23" cy="23" r="20"  id="a64" onclick="prueba(6,4)"/>
+                <circle cx="23" cy="23" r="20"  id="a77" onclick="completa(7,7)"/>
             </svg>
         </div>
         <div class="bloque1 cafe float1">H</div>
