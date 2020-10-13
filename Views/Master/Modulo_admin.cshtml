@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Icons/icon")
+    @Styles.Render("~/Content/slate1")
+    @Scripts.Render("/Scripts/jquery")
+    @Scripts.Render("/Scripts/jqueryval")
+    @Scripts.Render("/Scripts/modernizr")
+    @Scripts.Render("/Scripts/bootstrap")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <div id="menu" style="width:100%; height:50%; position:fixed; top:0%; left:0%; z-index:3;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+           
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        @Html.ActionLink("Usuarios", "Estadistica_usuario", "Usuario", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Reportes", "Notificaciones", "Usuario", null, new { @class = "nav-link" })
+                    </li>
+                    <li>
+                        @Session["id_admin"].ToString()
+                    </li>
+                    <li>
+                        @Html.ActionLink("Cerrar Sesion", "Principal", "Principal", null, new { @class = "nav-link" })
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+</body>
+</html>

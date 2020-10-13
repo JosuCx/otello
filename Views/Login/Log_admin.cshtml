@@ -1,0 +1,19 @@
+﻿@model otello.Models.administrador
+@{
+    ViewBag.Title = "Log_admin";
+    Layout = "~/Views/Master/Login.cshtml";
+}
+<div class="form-group">
+    @using (Html.BeginForm("Ingreso1", "Login", FormMethod.Post))
+    {
+        <p sytle="color:black;">Ingreso de Cuenta Administrativa</p>
+        @Html.EditorFor(model => model.id_admin, new { htmlAttributes = new { placeholder = "Escribe tu usuario administrador" } })
+        @Html.ValidationMessageFor(model => model.id_admin)
+        @Html.EditorFor(model => model.pass, new { htmlAttributes = new { placeholder = "Escribe tu password" } })
+        @Html.ValidationMessageFor(model => model.pass)
+        <label class="text-danger">@Html.DisplayFor(model => model.Error)</label>
+        <input type="submit" name="name" value="Ingresar" />
+     }
+
+</div>
+

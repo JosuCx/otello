@@ -43,5 +43,28 @@ namespace otello.Controllers
             
             return View();
         }
+        public ActionResult Log_admin() {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Ingreso1(otello.Models.administrador userModel)
+        {
+            using (othelloEntities1 db = new othelloEntities1())
+            {
+                var userdet = db.administradors.Where(x => x.id_admin == userModel.id_admin && x.pass == userModel.pass).FirstOrDefault();
+                if (userdet == null)
+                {
+                    userModel.Error = "Error con usuario o password";
+                    return View("Log_Ingresar", userModel);
+                }
+                else
+                {
+                    Session["id_admin"] = userdet.id_admin;
+                    return RedirectToAction("Menu_usuario", "Usuario");
+                }
+            }
+
+            return View();
+        }
     }
 }
