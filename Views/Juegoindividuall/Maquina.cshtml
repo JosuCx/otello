@@ -1,0 +1,493 @@
+﻿@{
+    ViewBag.Title = "Maquina";
+    Layout = "~/Views/Master/juegoIndividual.cshtml";
+}
+<div id="control_juego">
+    <center><h1>play</h1></center>
+    <!--Botones de juego-->
+    <table>
+        <tr>
+            <th>
+                <center><button name="play" onclick="play1()">Play</button></center>
+            </th>
+            <th>
+                <center><button name="reiniciar" onclick="reset1()">Reiniciar</button></center>
+            </th>
+            <th>
+                <center><button name="descargar" onclick="descargar1()">Descargar</button></center>
+            </th>
+            <th>
+                <center><button name="cargar" onclick="cargar1()">Cargar</button></center>
+            </th>
+            <th>
+                <center><button name="guarda" onclick="gua1()">Guardar Registro</button></center>
+            </th>
+        </tr>
+    </table>
+
+    <!--Tabla de jugador 1-->
+    <table style="background-color:aqua; color:black; width:100%;height:40%;">
+        <tr>
+            <th><center><h3>Jugador 1</h3></center></th>
+        </tr>
+        <tr>
+            <th>
+                <center><label id="fic1">Ficha blancas</label></center>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <label>Nombre:</label>
+            </td>
+            <td>
+                <label id="nom1"> Jugador1</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>No Partidas:</label>
+            </td>
+            <td>
+                <label id="partida1"> 0</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Puntos:</label>
+            </td>
+            <td>
+                <label id="pt_blancas">2 </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <center><button name="pasar1" onclick="pasar(1)">Pasar Turno</button></center>
+            </td>
+            <td>
+                <label>Estado:</label><label id="estado2"></label>
+            </td>
+        </tr>
+    </table>
+
+    <!--Tabla de jugador 2-->
+    <table style="background-color:darkorange; color:white; width:100%;height:40%;">
+        <tr>
+            <th><center><h3>Jugador 2</h3></center></th>
+        </tr>
+        <tr>
+            <th>
+                <center><label id="fic1">Ficha Negras</label></center>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <label>Nombre:</label>
+            </td>
+            <td>
+                <label id="nom2"> Maquina</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>No Partidas:</label>
+            </td>
+            <td>
+                <label id="partida2"> 0</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Puntos:</label>
+            </td>
+            <td>
+                <label id="pt_negras"> 2</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <center><button name="pasar2" onclick="pasar(2)">Pasar Turno</button></center>
+            </td>
+            <td>
+                <label>Estado:</label><label id="estado2"></label>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- Modulo de Juego -->>
+<div id="juegoo">
+    <!--Letras de Arriba-->
+    <div class="bloque1 cafe float1"></div>
+    <div class="bloque1 cafe float1">1</div>
+    <div class="bloque1 cafe float1">2</div>
+    <div class="bloque1 cafe float1">3</div>
+    <div class="bloque1 cafe float1">4</div>
+    <div class="bloque1 cafe float1">5</div>
+    <div class="bloque1 cafe float1">6</div>
+    <div class="bloque1 cafe float1">7</div>
+    <div class="bloque1 cafe float1">8</div>
+    <div class="bloque1 cafe float1"></div>
+
+    <div class="bloque1 cafe float1">1</div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a00" onclick="completa1(0,0)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a01" onclick="completa1(0,1)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a02" onclick="completa1(0,2)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a03" onclick="completa1(0,3)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a04" onclick="completa1(0,4)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a05" onclick="completa1(0,5)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a06" onclick="completa1(0,6)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a07" onclick="completa1(0,7)" />
+        </svg>
+    </div>
+    <div class="bloque1 cafe float1">A</div>
+
+
+    <div class="bloque1 cafe float1">2</div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a10" onclick="completa1(1,0)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a11" onclick="completa1(1,1)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a12" onclick="completa1(1,2)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a13" onclick="completa1(1,3)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a14" onclick="completa1(1,4)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a15" onclick="completa1(1,5)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a16" onclick="completa1(1,6)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a17" onclick="completa1(1,7)" />
+        </svg>
+    </div>
+    <div class="bloque1 cafe float1">B</div>
+
+
+    <div class="bloque1 cafe float1">3</div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a20" onclick="completa1(2,0)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a21" onclick="completa1(2,1)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a22" onclick="completa1(2,2)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a23" onclick="completa1(2,3)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a24" onclick="completa1(2,4)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a25" onclick="completa1(2,5)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a26" onclick="completa1(2,6)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a27" onclick="completa1(2,7)" />
+        </svg>
+    </div>
+    <div class="bloque1 cafe float1">C</div>
+
+
+    <div class="bloque1 cafe float1">4</div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a30" onclick="completa1(3,0)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a31" onclick="completa1(3,1)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a32" onclick="completa1(3,2)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg height="50" width="50">
+            <circle cx="23" cy="23" r="20" id="a33" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a34" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a35" onclick="completa1(3,5)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a36" onclick="completa1(3,6)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a37" onclick="completa1(3,7)" />
+        </svg>
+    </div>
+    <div class="bloque1 cafe float1">D</div>
+
+
+    <div class="bloque1 cafe float1">5</div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a40" onclick="completa1(4,0)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a41" onclick="completa1(4,1)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a42" onclick="completa1(4,2)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg height="50" width="50">
+            <circle cx="23" cy="23" r="20" id="a43" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg height="50" width="50">
+            <circle cx="23" cy="23" r="20" id="a44" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a45" onclick="completa1(4,5)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a46" onclick="completa1(4,6)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a47" onclick="completa1(4,7)" />
+        </svg>
+    </div>
+    <div class="bloque1 cafe float1">E</div>
+
+
+    <div class="bloque1 cafe float1">6</div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a50" onclick="completa1(5, 0)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a51" onclick="completa1(5, 1)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a52" onclick="completa1(5, 2)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a53" onclick="completa1(5, 3)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a54" onclick="completa1(5, 4)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a55" onclick="completa1(5, 5)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a56" onclick="completa1(5, 6)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a57" onclick="completa1(5, 7)" />
+        </svg>
+    </div>
+    <div class="bloque1 cafe float1">F</div>
+
+
+    <div class="bloque1 cafe float1">7</div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a60" onclick="completa1(6,0)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a61" onclick="completa1(6,1)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a62" onclick="completa1(6,2)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a63" onclick="completa1(6,3)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a64" onclick="completa1(6,4)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a65" onclick="completa1(6,5)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a66" onclick="completa1(6,6)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a67" onclick="completa1(6,7)" />
+        </svg>
+    </div>
+    <div class="bloque1 cafe float1">G</div>
+
+
+    <div class="bloque1 cafe float1">8</div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a70" onclick="completa1(7,0)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a71" onclick="completa1(7,1)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a72" onclick="completa1(7,2)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a73" onclick="completa1(7,3)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a74" onclick="completa1(7,4)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a75" onclick="completa1(7,5)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a76" onclick="completa1(7,6)" />
+        </svg>
+    </div>
+    <div class="bloque1 verde float1">
+        <svg>
+            <circle cx="23" cy="23" r="20" id="a77" onclick="completa1(7,7)" />
+        </svg>
+    </div>
+    <div class="bloque1 cafe float1">H</div>
+
+    <div class="bloque1 cafe float1"></div>
+    <div class="bloque1 cafe float1">A</div>
+    <div class="bloque1 cafe float1">B</div>
+    <div class="bloque1 cafe float1">C</div>
+    <div class="bloque1 cafe float1">D</div>
+    <div class="bloque1 cafe float1">E</div>
+    <div class="bloque1 cafe float1">F</div>
+    <div class="bloque1 cafe float1">G</div>
+    <div class="bloque1 cafe float1">H</div>
+    <div class="bloque1 cafe float1"></div>
+</div>
+
+
