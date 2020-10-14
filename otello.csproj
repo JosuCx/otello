@@ -288,10 +288,10 @@
     <Content Include="Views\Juegoindividuall\JugadorVsMaquina.cshtml" />
     <Content Include="Views\Master\Modulo_admin.cshtml" />
     <Content Include="Views\Login\Log_admin.cshtml" />
+    <Content Include="Views\Administrador\Administrador.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Administrador\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

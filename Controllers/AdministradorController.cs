@@ -9,7 +9,7 @@ namespace otello.Controllers
     public class AdministradorController : Controller
     {
         // GET: Administrador
-        public ActionResult Index()
+        public ActionResult Administrador()
         {
             return View();
         }

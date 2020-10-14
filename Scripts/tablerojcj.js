@@ -29,6 +29,7 @@ function play() {
     //inicio del juego
     var primer_jugador = prompt("Nombre del primer Jugador", "");
     var segundo_jugador = prompt("Nombre del segundo Jugador", "");
+    var nf = prompt("Cantidad de fichas", "");
     console.log(contador1);
     console.log(contador2);
     if (primer_jugador != null) {
@@ -36,27 +37,35 @@ function play() {
             if (primer_jugador == segundo_jugador) {
                 alert("los dos nombres pueden ser iguales, volver a intentar");
             } else {   
-                document.getElementById("nom1").innerHTML = "" + primer_jugador;
-                document.getElementById("nom2").innerHTML = "" + segundo_jugador;
-                document.getElementById("partida1").innerHTML = "0";
-                document.getElementById("partida2").innerHTML = "0";
-                document.getElementById("pt_blancas").innerHTML = "2";
-                document.getElementById("pt_negras").innerHTML = "2";
-                
-                for (i = 0; i < 8; i++) tablero[i] = new Array(8);
+                if (0 < nf < 60) {
+                    console.log("fichas en el rango "+nf);
+                    document.getElementById("nom1").innerHTML = "" + primer_jugador;
+                    document.getElementById("nom2").innerHTML = "" + segundo_jugador;
+                    document.getElementById("partida1").innerHTML = "0";
+                    document.getElementById("partida2").innerHTML = "0";
+                    document.getElementById("pt_blancas").innerHTML = "2";
+                    document.getElementById("pt_negras").innerHTML = "2";
 
-                tableroini();
-                tablero[3][3] = 1;
-                tablero[3][4] = 2;
-                tablero[4][3] = 1;
-                tablero[4][4] = 2;
-                contador1 = 0;
-                contador2 = 0;
-                mostrar()
-                document.getElementById("a33").style.fill = "white";
-                document.getElementById("a34").style.fill = "black";
-                document.getElementById("a43").style.fill = "black";
-                document.getElementById("a44").style.fill = "white";
+                    for (i = 0; i < 8; i++) tablero[i] = new Array(8);
+
+                    tableroini();
+                    tablero[3][3] = 1;
+                    tablero[3][4] = 2;
+                    tablero[4][3] = 1;
+                    tablero[4][4] = 2;
+                    contador1 = 0;
+                    contador2 = 0;
+                    mostrar()
+                    document.getElementById("a33").style.fill = "white";
+                    document.getElementById("a34").style.fill = "black";
+                    document.getElementById("a43").style.fill = "black";
+                    document.getElementById("a44").style.fill = "white";
+
+                } else {
+
+                    alert("fichas no el rango, volver a intentar");
+                }
+                
             }
         } else {
             alert("No has ingresado el nombre del segundo jugador, volver a intentar");
@@ -105,7 +114,16 @@ function posi( x) {
     }
 }
 
+function gua() {
+    if (bl == nf) {
+        console.log("gano blancas");
 
+    } else if (ne == nf) {
+        console.log("gano negras");
+    } else if (bl == ne) {
+        console.log("empate");
+    }
+}
 
 function prueba(x, y) {
     if (tablero[x][y] == 0) {
@@ -281,7 +299,7 @@ function completa(x, y) {
             }
             if (check == true) {
                 //derecha
-                for (i = 1; i < 8;i++) {
+                for (i = 1; i < 9;i++) {
                     if (tablero[(x)][(y + i)] == 2) {
                         tablero[x][(y + i)] = 1;
                         tablero[x][y] = 1;
@@ -292,7 +310,7 @@ function completa(x, y) {
                     }
                 }
                 //izquierda
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x)][(y - i)] == 2) {
                         tablero[x][(y - i)] = 1;
                         document.getElementById("a" + x + (y - i)).style.fill = "white";
@@ -302,7 +320,7 @@ function completa(x, y) {
                     }
                 }
                 //arriba
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x+i)][y] == 2) {
                         tablero[(x+i)][y] = 1;
                         document.getElementById("a" + (x+i) + y).style.fill = "white";
@@ -312,7 +330,7 @@ function completa(x, y) {
                     }
                 }
                 //abajo
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x-i)][y] == 2) {
                         tablero[(x-i)][y] = 1;
                         document.getElementById("a" + (x-i) + y).style.fill = "white";
@@ -322,8 +340,19 @@ function completa(x, y) {
                     }
                 }
                 //diagonalIzquierdo
-                for (i = 1; i < 8; i++) {
-                    if (tablero[(x+i)][(y + i)] == 2) {
+                for (i = 1; i < 9; i++) {
+                    if (tablero[(x + i)][(y + i)] == 2) {
+                        for (z = 1; z < 9; z++) {
+                            if (tablero[((x + i) + z)][((y + i) + z)]==1) {
+                                tablero[((x + i)+z)][((y + i)+z)] = 1;
+                                document.getElementById("a" + ((x + i) + z) + ((y + i) + z)).style.fill = "white";
+                                break;
+                            } else if (tablero[((x + i) + z)][((y + i) + z)] == 2) {
+                                tablero[((x + i)+z)][((y + i)+z)] = 1;
+                                document.getElementById("a" + ((x + i) + z) + ((y + i) + z)).style.fill = "white";
+                                
+                            }
+                        }
                         tablero[(x+i)][(y + i)] = 1;
                         document.getElementById("a" + (x+i) + (y + i)).style.fill = "white";
                     } else {
@@ -332,8 +361,18 @@ function completa(x, y) {
                     }
                 }
                 //diagonal baja derechas
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x + i)][(y - i)] == 2) {
+                        for (z = 1; z < 9; z++) {
+                            if (tablero[((x + i) + z)][((y - i) - z)] == 1) {
+                                tablero[((x + i) + z)][((y - i) - z)] = 1;
+                                document.getElementById("a" + ((x + i) + z) + ((y - i) - z)).style.fill = "white";
+                                break;
+                            } else if (tablero[((x + i) + z)][((y - i) - z)] == 2) {
+                                tablero[((x + i) + z)][((y - i) - z)] = 1;
+                                document.getElementById("a" + ((x + i) + z) + ((y - i) - z)).style.fill = "white";
+                            }
+                        }
                         tablero[(x + i)][(y - i)] = 1;
                         document.getElementById("a" + (x + i) + (y - i)).style.fill = "white";
                     } else {
@@ -342,8 +381,19 @@ function completa(x, y) {
                     }
                 }
                 //diagonal subida derecha
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][(y - i)] == 2) {
+                        for (z = 1; z < 9; z++) {
+                            if (tablero[((x - i) - z)][((y - i) - z)] == 1) {
+                                tablero[((x - i) - z)][((y - i) - z)] = 1;
+                                document.getElementById("a" + ((x - i) - z) + ((y - i) - z)).style.fill = "white";
+                                break;
+                            } else if (tablero[((x - i) - z)][((y - i) - z)] == 2) {
+                                tablero[((x - i) - z)][((y - i) - z)] = 1;
+                                document.getElementById("a" + ((x - i) - z) + ((y - i) - z)).style.fill = "white";
+
+                            }
+                        }
                         tablero[(x - i)][(y - i)] = 1;
                         document.getElementById("a" + (x - i) + (y - i)).style.fill = "white";
                     } else {
@@ -352,8 +402,18 @@ function completa(x, y) {
                     }
                 }
                 //diagonal subida izquierda
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][(y + i)] == 2) {
+                        for (z = 1; z < 9; z++) {
+                            if (tablero[((x - i) - z)][((y + i) + z)] == 1) {
+                                tablero[((x - i) - z)][((y + i) + z)] = 1;
+                                document.getElementById("a" + ((x - i) - z) + ((y + i) + z)).style.fill = "white";
+                                break;
+                            } else if (tablero[((x - i) - z)][((y + i) + z)] == 2) {
+                                tablero[((x - i) - z)][((y + i) + z)] = 1;
+                                document.getElementById("a" + ((x - i) - z) + ((y + i) + z)).style.fill = "white";
+                            }
+                        }
                         tablero[(x - i)][(y + i)] = 1;
                         document.getElementById("a" + (x - i) + (y + i)).style.fill = "white";
                     } else {
@@ -427,7 +487,7 @@ function completa(x, y) {
             }
             if (check == true) {
                 //derecha
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x)][(y + i)] == 1) {
                         tablero[x][(y + i)] = 2;
                         document.getElementById("a" + x + (y + i)).style.fill = "black";
@@ -437,7 +497,7 @@ function completa(x, y) {
                     }
                 }
                 //izquierda
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x)][(y - i)] == 1) {
                         tablero[x][(y - i)] = 2;
                         document.getElementById("a" + x + (y - i)).style.fill = "black";
@@ -447,7 +507,7 @@ function completa(x, y) {
                     }
                 }
                 //arriba
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x + i)][y] == 1) {
                         tablero[(x + i)][y] = 2;
                         document.getElementById("a" + (x + i) + y).style.fill = "black";
@@ -457,7 +517,7 @@ function completa(x, y) {
                     }
                 }
                 //abajo
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][y] == 1) {
                         tablero[(x - i)][y] = 2;
                         document.getElementById("a" + (x - i) + y).style.fill = "black";
@@ -467,8 +527,19 @@ function completa(x, y) {
                     }
                 }
                 //diagonalIzquierdo
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x + i)][(y + i)] == 1) {
+                        for (z = 1; z < 9; z++) {
+                            if (tablero[((x + i) + z)][((y + i) + z)] == 2) {
+                                tablero[((x + i) + z)][((y + i) + z)] = 2;
+                                document.getElementById("a" + ((x + i) + z) + ((y + i) + z)).style.fill = "black";
+                                break;
+                            } else if (tablero[((x + i) + z)][((y + i) + z)] == 1) {
+                                tablero[((x + i) + z)][((y + i) + z)] = 2;
+                                document.getElementById("a" + ((x + i) + z) + ((y + i) + z)).style.fill = "black";
+
+                            }
+                        }
                         tablero[(x + i)][(y + i)] = 2;
                         document.getElementById("a" + (x + i) + (y + i)).style.fill = "black";
                     } else {
@@ -477,8 +548,19 @@ function completa(x, y) {
                     }
                 }
                 //diagonal baja derechas
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x + i)][(y - i)] == 1) {
+                        for (z = 1; z < 9; z++) {
+                            if (tablero[((x + i) + z)][((y - i) - z)] == 2) {
+                                tablero[((x + i) + z)][((y - i) - z)] = 2;
+                                document.getElementById("a" + ((x + i) + z) + ((y - i) - z)).style.fill = "black";
+                                break;
+                            } else if (tablero[((x + i) + z)][((y - i) - z)] == 1) {
+                                tablero[((x + i) + z)][((y - i) - z)] = 2;
+                                document.getElementById("a" + ((x + i) + z) + ((y - i) - z)).style.fill = "black";
+
+                            }
+                        }
                         tablero[(x + i)][(y - i)] = 2;
                         document.getElementById("a" + (x + i) + (y - i)).style.fill = "black";
                     } else {
@@ -487,8 +569,18 @@ function completa(x, y) {
                     }
                 }
                 //diagonal subida derecha
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][(y - i)] == 1) {
+                        for (z = 1; z < 9; z++) {
+                            if (tablero[((x - i) - z)][((y - i) - z)] == 2) {
+                                tablero[((x - i) - z)][((y - i) - z)] = 2;
+                                document.getElementById("a" + ((x - i) - z) + ((y - i) - z)).style.fill = "black";
+                                break;
+                            } else if (tablero[((x - i) - z)][((y - i) - z)] == 1) {
+                                tablero[((x - i) - z)][((y - i) - z)] = 2;
+                                document.getElementById("a" + ((x - i) - z) + ((y - i) - z)).style.fill = "black";
+                            }
+                        }
                         tablero[(x - i)][(y - i)] = 2;
                         document.getElementById("a" + (x - i) + (y - i)).style.fill = "black";
                     } else {
@@ -497,8 +589,18 @@ function completa(x, y) {
                     }
                 }
                 //diagonal subida izquierda
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][(y + i)] == 1) {
+                        for (z = 1; z < 9; z++) {
+                            if (tablero[((x - i) - z)][((y + i) + z)] == 2) {
+                                tablero[((x - i) - z)][((y + i) + z)] = 2;
+                                document.getElementById("a" + ((x - i) - z) + ((y + i) + z)).style.fill = "black";
+                                break;
+                            } else if (tablero[((x - i) - z)][((y + i) + z)] == 1) {
+                                tablero[((x - i) - z)][((y + i) + z)] = 2;
+                                document.getElementById("a" + ((x - i) - z) + ((y + i) + z)).style.fill = "black";
+                            }
+                        }
                         tablero[(x - i)][(y + i)] = 2;
                         document.getElementById("a" + (x - i) + (y + i)).style.fill = "black";
                     } else {
@@ -528,7 +630,7 @@ function completa(x, y) {
 
 }
 
-
+//copia
 function completa1(x, y) {
     if (tablero[x][y] == 0) {
         if (contador1 == contador2) {
@@ -537,29 +639,58 @@ function completa1(x, y) {
             check_abajo = x + 1;
             check_d = y - 1;
             check_i = y + 1;
+            //diagonal subida derecha
             check_d1_x = x - 1;
             check_d1_y = y - 1;
+            //diagonal subida izquierda
             check_d2_x = x - 1;
             check_d2_y = y + 1;
+            //diagonal baja derecha
             check_d3_x = x + 1;
             check_d3_y = y - 1;
+            //diagonal baja izquierda
             check_d4_x = x + 1;
             check_d4_y = y + 1;
+            //arriba
             if (tablero[check_arriba][y] == 2) {
                 check = true;
-            } else if (tablero[check_abajo][y] == 2) {
+            }
+            //abajo
+            else if (tablero[check_abajo][y] == 2) {
                 check = true;
-            } else if (tablero[check_i][y] == 2) {
+            }
+            //izquierda
+            else if (tablero[check_i][y] == 2) {
                 check = true;
-            } else if (tablero[check_d][y] == 2) {
+            }
+            //derecha
+            else if (tablero[check_d][y] == 2) {
                 check = true;
-            } else {
+            }
+            //diagonal subida derecha
+            else if (tablero[check_d1_x][check_d1_y] == 2) {
+                check = true;
+            }
+            //diagonal subida izquierda
+            else if (tablero[check_d2_x][check_d2_y] == 2) {
+                check = true;
+            }
+            //diagonal baja derecha
+            else if (tablero[check_d3_x][check_d3_y] == 2) {
+                check = true;
+            }
+            //diagonal baja izquierda
+            else if (tablero[check_d4_x][check_d4_y] == 2) {
+                check = true;
+            }
+            //niguno
+            else {
                 console.log("no se puedo")
                 alert("casilla invalida");
             }
             if (check == true) {
                 //derecha
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x)][(y + i)] == 2) {
                         tablero[x][(y + i)] = 1;
                         tablero[x][y] = 1;
@@ -570,7 +701,7 @@ function completa1(x, y) {
                     }
                 }
                 //izquierda
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x)][(y - i)] == 2) {
                         tablero[x][(y - i)] = 1;
                         document.getElementById("a" + x + (y - i)).style.fill = "white";
@@ -580,7 +711,7 @@ function completa1(x, y) {
                     }
                 }
                 //arriba
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x + i)][y] == 2) {
                         tablero[(x + i)][y] = 1;
                         document.getElementById("a" + (x + i) + y).style.fill = "white";
@@ -590,7 +721,7 @@ function completa1(x, y) {
                     }
                 }
                 //abajo
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][y] == 2) {
                         tablero[(x - i)][y] = 1;
                         document.getElementById("a" + (x - i) + y).style.fill = "white";
@@ -600,7 +731,7 @@ function completa1(x, y) {
                     }
                 }
                 //diagonalIzquierdo
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x + i)][(y + i)] == 2) {
                         tablero[(x + i)][(y + i)] = 1;
                         document.getElementById("a" + (x + i) + (y + i)).style.fill = "white";
@@ -610,7 +741,7 @@ function completa1(x, y) {
                     }
                 }
                 //diagonal baja derechas
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x + i)][(y - i)] == 2) {
                         tablero[(x + i)][(y - i)] = 1;
                         document.getElementById("a" + (x + i) + (y - i)).style.fill = "white";
@@ -620,7 +751,7 @@ function completa1(x, y) {
                     }
                 }
                 //diagonal subida derecha
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][(y - i)] == 2) {
                         tablero[(x - i)][(y - i)] = 1;
                         document.getElementById("a" + (x - i) + (y - i)).style.fill = "white";
@@ -630,7 +761,7 @@ function completa1(x, y) {
                     }
                 }
                 //diagonal subida izquierda
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][(y + i)] == 2) {
                         tablero[(x - i)][(y + i)] = 1;
                         document.getElementById("a" + (x - i) + (y + i)).style.fill = "white";
@@ -639,6 +770,8 @@ function completa1(x, y) {
                         break;
                     }
                 }
+                tablero[x][y] = 1;
+                document.getElementById("a" + x + y).style.fill = "white";
                 contador1 = contador1 + 1;
                 document.getElementById("partida1").innerHTML = "" + contador1;
                 console.log(contador1);
@@ -653,29 +786,57 @@ function completa1(x, y) {
             check_abajo = x + 1;
             check_d = y - 1;
             check_i = y + 1;
+            //diagonal subida derecha
             check_d1_x = x - 1;
             check_d1_y = y - 1;
+            //diagonal subida izquierda
             check_d2_x = x - 1;
             check_d2_y = y + 1;
+            //diagonal baja derecha
             check_d3_x = x + 1;
             check_d3_y = y - 1;
+            //diagonal baja izquierda
             check_d4_x = x + 1;
             check_d4_y = y + 1;
+            //arriba
             if (tablero[check_arriba][y] == 1) {
                 check = true;
-            } else if (tablero[check_abajo][y] == 1) {
+            }
+            //abajo
+            else if (tablero[check_abajo][y] == 1) {
                 check = true;
-            } else if (tablero[check_i][y] == 1) {
+            }
+            //izquierda
+            else if (tablero[check_i][y] == 1) {
                 check = true;
-            } else if (tablero[check_d][y] == 1) {
+            }
+            //derecha
+            else if (tablero[check_d][y] == 1) {
                 check = true;
-            } else {
+            }
+            //diagonal subida derecha
+            else if (tablero[check_d1_x][check_d1_y] == 1) {
+                check = true;
+            }
+            //diagonal subida izquierda
+            else if (tablero[check_d2_x][check_d2_y] == 1) {
+                check = true;
+            }
+            //diagonal baja derecha
+            else if (tablero[check_d3_x][check_d3_y] == 1) {
+                check = true;
+            }
+            //diagonal baja izquierda
+            else if (tablero[check_d4_x][check_d4_y] == 1) {
+                check = true;
+            }
+            else {
                 console.log("no se puedo")
                 alert("casilla invalida");
             }
             if (check == true) {
                 //derecha
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x)][(y + i)] == 1) {
                         tablero[x][(y + i)] = 2;
                         document.getElementById("a" + x + (y + i)).style.fill = "black";
@@ -685,7 +846,7 @@ function completa1(x, y) {
                     }
                 }
                 //izquierda
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x)][(y - i)] == 1) {
                         tablero[x][(y - i)] = 2;
                         document.getElementById("a" + x + (y - i)).style.fill = "black";
@@ -695,7 +856,7 @@ function completa1(x, y) {
                     }
                 }
                 //arriba
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x + i)][y] == 1) {
                         tablero[(x + i)][y] = 2;
                         document.getElementById("a" + (x + i) + y).style.fill = "black";
@@ -705,55 +866,57 @@ function completa1(x, y) {
                     }
                 }
                 //abajo
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][y] == 1) {
                         tablero[(x - i)][y] = 2;
-                        document.getElementById("a" + (x - i) + y).style.fill = "white";
+                        document.getElementById("a" + (x - i) + y).style.fill = "black";
                     } else {
                         console.log("N no es abajo " + i);
                         break;
                     }
                 }
                 //diagonalIzquierdo
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x + i)][(y + i)] == 1) {
                         tablero[(x + i)][(y + i)] = 2;
-                        document.getElementById("a" + (x + i) + (y + i)).style.fill = "white";
+                        document.getElementById("a" + (x + i) + (y + i)).style.fill = "black";
                     } else {
                         console.log("N diagonal bajada Izquierda " + i);
                         break;
                     }
                 }
                 //diagonal baja derechas
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x + i)][(y - i)] == 1) {
                         tablero[(x + i)][(y - i)] = 2;
-                        document.getElementById("a" + (x + i) + (y - i)).style.fill = "white";
+                        document.getElementById("a" + (x + i) + (y - i)).style.fill = "black";
                     } else {
                         console.log("N diagonal derecha Izquierda " + i);
                         break;
                     }
                 }
                 //diagonal subida derecha
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][(y - i)] == 1) {
                         tablero[(x - i)][(y - i)] = 2;
-                        document.getElementById("a" + (x - i) + (y - i)).style.fill = "white";
+                        document.getElementById("a" + (x - i) + (y - i)).style.fill = "black";
                     } else {
                         console.log("N diagonal subida Derecha " + i);
                         break;
                     }
                 }
                 //diagonal subida izquierda
-                for (i = 1; i < 8; i++) {
+                for (i = 1; i < 9; i++) {
                     if (tablero[(x - i)][(y + i)] == 1) {
                         tablero[(x - i)][(y + i)] = 2;
-                        document.getElementById("a" + (x - i) + (y + i)).style.fill = "white";
+                        document.getElementById("a" + (x - i) + (y + i)).style.fill = "black";
                     } else {
                         console.log("N Diagonal Subida Izquierda " + i);
                         break;
                     }
                 }
+                tablero[x][y] = 2;
+                document.getElementById("a" + x + y).style.fill = "black";
                 contador2 = contador2 + 1;
                 console.log("suma");
                 document.getElementById("partida2").innerHTML = "" + contador2;
