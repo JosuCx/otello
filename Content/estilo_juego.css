@@ -1,4 +1,9 @@
 ﻿body {
+    background-image: url(../image/tablero.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
 }
 #navv {
 width:60%;
@@ -7,6 +12,7 @@ position:fixed;
 top:0%;
 left:10%;
 }
+
 #control_juego {
 background-color:crimson;
 width:25%;
@@ -17,12 +23,12 @@ left:70%;
 }
 #juegoo {
     background-color:darkred;
-    width:40%;
-    height:80%;
-    position:fixed;
-    top:10%;
-    left:10%;
-    padding-left:1%;
+    width:38%;
+    height:76%;
+    position:absolute;
+    top:20%;
+    left:25%;
+    
 }
 .bloque1 {
     border:1px solid #000;
@@ -315,4 +321,43 @@ left:70%;
 
 #a77 {
     fill: green;
+}
+
+#control_juego2 {
+    background-color: crimson;
+    color: black;
+    width: 800px;
+    height: 100px;
+    position: absolute;
+    top: 5px;
+    left: 350px;
+}
+
+#co_j1 {
+    background-color: aqua;
+    color:black;
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    top: 120px;
+    left: 20px;
+}
+
+#co_j2 {
+    background-color: brown;
+    color: black;
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    top: 120px;
+    left: 940px;
+}
+#colors1:hover {
+    background-color:red;
+}
+#colors1:checked {
+    background-color:red;
+}
+input#colors1:focus {
+    background-color:red;
 }

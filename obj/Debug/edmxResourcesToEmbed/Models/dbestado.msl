@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="othelloModel2StoreContainer" CdmEntityContainer="othelloEntities2">
+    <EntitySetMapping Name="detalles">
+      <EntityTypeMapping TypeName="othelloModel2.detalle">
+        <MappingFragment StoreEntitySet="detalle">
+          <ScalarProperty Name="id_detalle" ColumnName="id_detalle" />
+          <ScalarProperty Name="usuario1" ColumnName="usuario1" />
+          <ScalarProperty Name="no_fichas" ColumnName="no_fichas" />
+          <ScalarProperty Name="movimiento" ColumnName="movimiento" />
+          <ScalarProperty Name="estado1" ColumnName="estado1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -18,5 +18,9 @@ namespace otello.Controllers
         {
             return View();
         }
+
+        public ActionResult Jugador_vs_Jugador() {
+            return View();
+        }
     }
 }

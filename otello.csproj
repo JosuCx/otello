@@ -137,18 +137,42 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Clases\colorview.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\estadoslista.cs" />
+    <Compile Include="Clases\funciones_inversas.cs" />
+    <Compile Include="Clases\funciones_tablero_inverso.cs" />
     <Compile Include="Controllers\AdministradorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InversoController.cs" />
     <Compile Include="Controllers\JuegoindividuallController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PrincipalController.cs" />
+    <Compile Include="Controllers\TorneoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\administrador.cs">
       <DependentUpon>dbadmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\color.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>color.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\color.cs">
+      <DependentUpon>color.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\color.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>color.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\color1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>color.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dbadmin.Context.cs">
       <AutoGen>True</AutoGen>
@@ -165,6 +189,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbadmin.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\dbestado.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbestado.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbestado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbestado.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbestado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbestado.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\dbusuario.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +219,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbusuario.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\detalle.cs">
+      <DependentUpon>dbestado.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\guardadopartida.cs" />
     <Compile Include="Models\usuario.cs">
       <DependentUpon>dbusuario.tt</DependentUpon>
     </Compile>
@@ -204,6 +247,16 @@
     <Content Include="Icons\font-awesome.min.css" />
     <Content Include="Icons\fontawesome-webfont.svg" />
     <Content Include="image\tablero.png" />
+    <Content Include="Models\color.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>color.edmx</DependentUpon>
+      <LastGenOutput>color.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\color.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>color.edmx</DependentUpon>
+      <LastGenOutput>color1.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\dbadmin.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>dbadmin.edmx</DependentUpon>
@@ -213,6 +266,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>dbadmin.edmx</DependentUpon>
       <LastGenOutput>dbadmin.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\dbestado.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbestado.edmx</DependentUpon>
+      <LastGenOutput>dbestado.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\dbestado.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbestado.edmx</DependentUpon>
+      <LastGenOutput>dbestado.cs</LastGenOutput>
     </Content>
     <Content Include="Models\dbusuario.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -245,6 +308,20 @@
     </EntityDeploy>
     <Content Include="Models\dbadmin.edmx.diagram">
       <DependentUpon>dbadmin.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\dbestado.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbestado.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\dbestado.edmx.diagram">
+      <DependentUpon>dbestado.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\color.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>color.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\color.edmx.diagram">
+      <DependentUpon>color.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -289,9 +366,14 @@
     <Content Include="Views\Master\Modulo_admin.cshtml" />
     <Content Include="Views\Login\Log_admin.cshtml" />
     <Content Include="Views\Administrador\Administrador.cshtml" />
+    <Content Include="Views\Juegoindividuall\Maquina.cshtml" />
+    <Content Include="Views\Master\Torneomm.cshtml" />
+    <Content Include="Views\Juegoindividuall\Jugador_vs_Jugador.cshtml" />
+    <Content Include="Views\Inverso\RetoInverso.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Torneo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
