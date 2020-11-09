@@ -60,5 +60,20 @@ namespace otello.Controllers
             }
             return View(lts);
         }
+        public ActionResult partidas_ganadas()
+        {
+            string vaa = (string)Session["usuario1"];
+            List<detallepartida> lts = null;
+            using (othelloEntities2 db = new othelloEntities2())
+            {
+                lts = (from d in db.detalles
+                       where d.usuario1.Equals(vaa) && d.estado1==1 
+                       select new detallepartida
+                       {
+                           est1=d.estado1
+                       }).ToList();
+            }
+            return View(lts);
+        }
     }
 }
