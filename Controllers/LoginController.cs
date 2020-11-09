@@ -26,7 +26,7 @@ namespace otello.Controllers
         [HttpPost]
         public ActionResult Ingreso(otello.Models.usuario userModel) 
         {
-            using (othelloEntities db = new othelloEntities())
+            using (othelloEntities4 db = new othelloEntities4())
             {
                 var userdet = db.usuarios.Where(x => x.usuario1 == userModel.usuario1 && x.pass == userModel.pass).FirstOrDefault();
                 if (userdet == null)

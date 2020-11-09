@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="othelloModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="dbusuario.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="usuario">
           <Key>
             <PropertyRef Name="usuario" />
@@ -17,14 +17,14 @@
           <Property Name="pais" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="email" Type="nvarchar" MaxLength="250" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="othelloModelStoreContainer">
+        <EntityContainer Name="dbusuarioStoreContainer">
           <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="othelloModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="dbusuario" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="usuario">
           <Key>
             <PropertyRef Name="usuario1" />
@@ -37,7 +37,7 @@
           <Property Name="pais" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="othelloEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="othelloEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="usuarios" EntityType="Self.usuario" />
         </EntityContainer>
       </Schema>
@@ -45,9 +45,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="othelloModelStoreContainer" CdmEntityContainer="othelloEntities">
+        <EntityContainerMapping StorageEntityContainer="dbusuarioStoreContainer" CdmEntityContainer="othelloEntities4">
           <EntitySetMapping Name="usuarios">
-            <EntityTypeMapping TypeName="othelloModel.usuario">
+            <EntityTypeMapping TypeName="dbusuario.usuario">
               <MappingFragment StoreEntitySet="usuario">
                 <ScalarProperty Name="usuario1" ColumnName="usuario" />
                 <ScalarProperty Name="nombres" ColumnName="nombres" />

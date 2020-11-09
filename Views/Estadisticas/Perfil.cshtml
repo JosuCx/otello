@@ -1,0 +1,58 @@
+﻿@model List<otello.Clases.usuarioview>
+@{
+    ViewBag.Title = "Perfil";
+    Layout = "~/Views/Master/usuario.cshtml";
+    var vaa = Convert.ToString(Session["usuario1"]);
+}
+<br />
+<br />
+<br />
+<br />
+<h2>Perfil</h2>
+<!--datos normales-->
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>Nombre usuario</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Fecha nacimiento</th>
+                <th>Password</th>
+                <th>Pais</th>
+                <th>Correo</th>
+            </tr>
+
+
+            @foreach (var element in Model)
+            {
+
+                <tr>
+                    <td>@element.usu</td>
+                    <td>@element.nom</td>
+                    <td>@element.ape</td>
+                    <td>@element.fec</td>
+                    <td>@element.pas</td>
+                    <td>@element.pai</td>
+                    <td>@element.ema</td>
+                </tr>
+
+            }
+
+        </table>
+    </div>
+</div>
+<br />
+<br />
+<!--Botones-->
+<div>
+    @Html.ActionLink("Datos Generales", "Perfil", "Estadisticas", null, new { @class = "nav-link" })
+    @Html.ActionLink("Partidas", "Perfil", "Estadisticas", null, new { @class = "nav-link" })
+    @Html.ActionLink("Torneos", "Perfil", "Estadisticas", null, new { @class = "nav-link" })
+    @Html.ActionLink("No_torneos", "Perfil", "Estadisticas", null, new { @class = "nav-link" })
+    @Html.ActionLink("No_Ganados", "Perfil", "Estadisticas", null, new { @class = "nav-link" })
+    @Html.ActionLink("No_perdidas", "Perfil", "Estadisticas", null, new { @class = "nav-link" })
+    @Html.ActionLink("No_perdidas", "Perfil", "Estadisticas", null, new { @class = "nav-link" })
+    @Html.ActionLink("No_torneo Ganados", "Perfil", "Estadisticas", null, new { @class = "nav-link" })
+    @Html.ActionLink("No_torneo Pts", "Perfil", "Estadisticas", null, new { @class = "nav-link" })
+</div>

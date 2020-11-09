@@ -11,20 +11,22 @@ namespace otello.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
 
+    using System.ComponentModel.DataAnnotations;
     public partial class usuario
     {
-        [Required(ErrorMessage ="Usuario Incorrecto, intente de nuevo")]
+        [Required(ErrorMessage = "Usuario Incorrecto, intente de nuevo")]
         public string usuario1 { get; set; }
         public string nombres { get; set; }
         public string apellidos { get; set; }
         public System.DateTime fecha { get; set; }
+        
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Password Incorrecto, intente de nuevo")]
         public string pass { get; set; }
         public string pais { get; set; }
         public string email { get; set; }
+
         public string Error { get; set; }
     }
 }

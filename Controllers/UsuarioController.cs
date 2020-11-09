@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using otello.Models;
+using otello.Clases;
 
 namespace otello.Controllers
 {
@@ -10,10 +12,6 @@ namespace otello.Controllers
     {
         // GET: Usuario
         public ActionResult Menu_usuario()
-        {
-            return View();
-        }
-        public ActionResult Estadistica_usuario()
         {
             return View();
         }
@@ -29,5 +27,7 @@ namespace otello.Controllers
         {
             return View();
         }
+       
+
     }
 }

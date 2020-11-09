@@ -3,7 +3,9 @@
 @{
     ViewBag.Title = "RetoInverso";
     Layout = "~/Views/Master/juegoIndividual.cshtml";
-
+    var cont = otello.Clases.funciones_tablero_inverso.contador1;
+    var color1 = 0;
+    var color2 = 0;
 }
 
 
@@ -12,18 +14,22 @@
 <div id="control_juego2">
 
     <table style="width:200px;">
+        <!--Inicio formulario-->
+         <form> </form>
         <tr>
+            <!--Nombre del Jugador1-->
             <td>
                 <label>Nombre:</label>
             </td>
             <td>
                 <input type="text" name="juga1" placeholder="Nombre del jugador 1" />
             </td>
+            <!--Color del Jugador1-->
             <td>
-                <label>Color del Jugador1:</label>
+                <label>Color Jugador1:</label>
             </td>
             <td>
-                <select>
+                <select id="co_juga2">
                     <option value="0">Seleccione:</option>
                     <option value="1">Rojo</option>
                     <option value="2">Amarillo</option>
@@ -37,23 +43,35 @@
                     <option value="10">Gris</option>
                 </select>
             </td>
+            <td>
+                @Html.ActionLink("tempo1", "mostrar1", "Inverso", null, new { @class = "btn btn-primary" })
+            </td>
+            <!--fichas-->
+            <td>
+                <label>No.fichas</label>
+            </td>
+            <td>
+                <input type="text" />@Html.ActionLink("tempo1", "mostrar1", "Inverso")
+            </td>
         </tr>
         <tr>
+            <!--Nombre del Jugador2-->
             <td>
                 <label>Nombre:</label>
             </td>
+            <!--Color del Jugador2-->
             <td>
                 <input type="text" name="juga2" placeholder="Nombre del jugador 2" />
             </td>
             <td>
-                <label>Color del Jugador2:</label>
+                <label>Color Jugador2:</label>
             </td>
             <td>
-                <select>
+                <select id="co_juga2">
                     <option value="0">Seleccione:</option>
                     <option value="1">Rojo</option>
-                    <option value="2"></option>
-                    <option value="3"></option>
+                    <option value="2">Amarillo</option>
+                    <option value="3">Azul</option>
                     <option value="4">Anaranjado</option>
                     <option value="5">Verde</option>
                     <option value="6">Violeta</option>
@@ -63,31 +81,28 @@
                     <option value="10">Gris</option>
                 </select>
                 <!--
-                    @foreach (var m in Model)
-                    {
-                        @Html.RadioButton("Color", m.Co, new { @id = m.Co })
-                        @Html.Label(m.Co, new { @for = m.Co })
-                    }
-                -->
+                @foreach (var m in Model)
+                {
+                    @Html.RadioButton("Color", m.Co, new { @id = m.Co })
+                    @Html.Label(m.Co, new { @for = m.Co })
+                }
+            -->
 
             </td>
-        </tr>
-        <tr><td>
-                <label>No.fichas</label>
-            </td>
-            <td>
-                <input type="text" />
-            </td>
+            <!--play-->
             <td>
                 <button name="play" onclick="play()">Play</button>
             </td>
+            <!--reset-->
             <td>
                 <button name="reiniciar" onclick="reset()">Reiniciar</button>
             </td>
+            <!--Guardar-->
             <td>
                 <button name="reiniciar" onclick="reset()">Guardar</button>
             </td>
         </tr>
+
     </table>
 </div>
 <!--Control Jugador 1-->
@@ -95,15 +110,22 @@
     <table>
         <tr>
             <td><label>Jugador1:</label></td>
-            <td><label></label></td>
+            <td><label>
+            
+            </label></td>
         </tr>
         <tr>
             <td><label>Color:</label></td>
-            <td><label></label></td>
+            <td><label>
+               
+                    <label>h: @ViewBag.tiempo1</label>
+                    
+                    <label>Hola: @ViewBag.tiempo1</label>
+                                @ViewBag.tiempo1</label></td>
         </tr>
         <tr>
             <td><label>no_fichas:</label></td>
-            <td><label></label></td>
+            <td><label>@ViewBag.tt</label></td>
         </tr>
         <tr>
             <td><label>no_partidas</label></td>

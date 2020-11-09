@@ -13,10 +13,10 @@ namespace otello.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class othelloEntities : DbContext
+    public partial class othelloEntities4 : DbContext
     {
-        public othelloEntities()
-            : base("name=othelloEntities")
+        public othelloEntities4()
+            : base("name=othelloEntities4")
         {
         }
     
